@@ -1,0 +1,51 @@
+.container {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-bottom: 1px solid #e5e5e5;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.container_primary,
+.container_secondary {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container_primary,
+.container_secondary > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 800px;
+  min-width: 300px;
+  height: 40px;
+  margin-left: 20px;
+  padding: 0px 5px 0px 10px;
+
+  background-color: rgb(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.input > input {
+  width: 100%;
+
+  margin-right: 10px;
+
+  font-size: 1rem;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.container_secondary > div > h2 {
+  font-size: 0.9rem;
+}

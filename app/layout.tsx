@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
 import localFont from 'next/font/local'
+import "./global.css"
 
 const gothamBook = localFont({ src: '../public/fonts/Gotham Book.otf' })
 export const openSans = Open_Sans({ subsets: ['latin'] })

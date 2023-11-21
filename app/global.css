@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-weight: 400;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+textarea {
+  border: none;
+  background: transparent;
+  border-radius: 0;
+}
