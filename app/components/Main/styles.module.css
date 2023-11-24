@@ -1,0 +1,62 @@
+.container {
+  text-align: center;
+}
+
+.container > h1 {
+  margin-bottom: 50px;
+
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.list {
+  border: 1px solid black;
+
+  padding: 0px 100px;
+}
+
+.list > ul {
+  border: 1px solid red;
+}
+
+.card > button {
+  border: 1px solid blue;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+
+.card > button > img {
+  border: 1px solid green;
+
+  width: 320px;
+  width: 420px;
+}
+
+.card > button > h2 {
+  font-size: 1.3rem;
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.discount > h3 {
+  margin-top: 0.3rem;
+
+  font-weight: bold;
+  font-size: 1rem;
+}
+.discount > span {
+  font-size: 0.8rem;
+  text-decoration: line-through;
+}
+
+.card > h4 {
+  color: grey;
+  font-size: 0.8rem;
+}
