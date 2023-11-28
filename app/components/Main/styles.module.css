@@ -12,11 +12,18 @@
 .list {
   border: 1px solid black;
 
-  padding: 0px 100px;
+  /* padding: 0px 100px; */
+
+  display: flex;
+  justify-content: center;
 }
 
 .list > ul {
   border: 1px solid red;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 25px;
 }
 
 .card > button {
@@ -31,12 +38,17 @@
 .card > button > img {
   border: 1px solid green;
 
-  width: 320px;
-  width: 420px;
+  width: 400px;
+  height: 500px;
+
+  object-fit: scale-down;
+  object-position: center;
 }
 
 .card > button > h2 {
-  font-size: 1.3rem;
+  margin-top: 10px;
+
+  font-size: 1.2rem;
 }
 
 .discount {
@@ -51,6 +63,7 @@
   font-weight: bold;
   font-size: 1rem;
 }
+
 .discount > span {
   font-size: 0.8rem;
   text-decoration: line-through;
@@ -59,4 +72,36 @@
 .card > h4 {
   color: grey;
   font-size: 0.8rem;
+}
+
+@media (max-width: 1710px) {
+  .list > ul {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 1280px) {
+  .list > ul {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .card > button {
+    width: 300px;
+  }
+  .card > button > img {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 710px) {
+  .card > button {
+    width: 200px;
+  }
+  .card > button > img {
+    width: 200px;
+    height: 300px;
+  }
 }
