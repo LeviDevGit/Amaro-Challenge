@@ -1,5 +1,5 @@
-import HeaderComponent from "./components/Header/HeaderComponent";
-import MainComponent from "./components/Main/MainComponent";
+import HeaderComponent from "./_components/Header/HeaderComponent";
+import MainComponent from "./_components/Main/MainComponent";
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <HeaderComponent />
       <MainComponent />
     </div>
-  )
+  );
 }

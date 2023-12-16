@@ -1,5 +1,9 @@
 .container {
   text-align: center;
+
+  padding-bottom: 50px;
+
+  margin-top: 19px;
 }
 
 .container > h1 {
@@ -10,7 +14,7 @@
 }
 
 .list {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
   /* padding: 0px 100px; */
 
@@ -19,15 +23,35 @@
 }
 
 .list > ul {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-gap: 25px;
 }
 
-.card > button {
-  border: 1px solid blue;
+.card {
+  position: relative;
+}
+
+.wishlist {
+  padding: 1px;
+
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: hsla(0, 0%, 100%, 0.7);
+  border-radius: 5px;
+}
+
+.product {
+  /* border: 1px solid blue; */
 
   display: flex;
   flex-direction: column;
@@ -35,17 +59,27 @@
   gap: 0.2rem;
 }
 
-.card > button > img {
-  border: 1px solid green;
+.productImage {
+  background-color: #f6f7f0;
+}
+
+.productImage > img {
+  /* border: 1px solid green; */
+  mix-blend-mode: darken;
 
   width: 400px;
   height: 500px;
 
   object-fit: scale-down;
   object-position: center;
+
+  transition: transform 0.2s;
+}
+.productImage > img:hover {
+  transform: scale(0.9);
 }
 
-.card > button > h2 {
+.product > h2 {
   margin-top: 10px;
 
   font-size: 1.2rem;

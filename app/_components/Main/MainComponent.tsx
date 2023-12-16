@@ -1,9 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 import styles from "./styles.module.css";
 import database from "@/app/services/products.json";
+import coracaoVazio from "@/public/icons/coracao.svg";
+import Image from "next/image";
 
 export default function MainComponent() {
   const router = useRouter();
@@ -14,7 +15,7 @@ export default function MainComponent() {
 
   return (
     <main className={styles.container}>
-      <h1>Mais vendidos em Moda Feminina</h1>
+      <h1>Roupas Femininas</h1>
       <div className={styles.list}>
         <ul>
           {true
@@ -25,12 +26,24 @@ export default function MainComponent() {
 
                 return (
                   <li className={styles.card} key={index}>
+                    <button className={styles.wishlist}>
+                      <Image
+                        src={coracaoVazio}
+                        alt="Lista de desejos"
+                        title="Adicionar a sua lista de desejos"
+                        width={36}
+                        height={30}
+                      />
+                    </button>
                     <button
+                      className={styles.product}
                       onClick={() => {
                         handleButtonClick(product.style);
                       }}
                     >
-                      <img src={product.image} alt={product.name} />
+                      <div className={styles.productImage}>
+                        <img src={product.image} alt={product.name} />
+                      </div>
 
                       <h2>{product.name}</h2>
                       <div className={styles.discount}>

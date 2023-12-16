@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import HeaderLogo from "@/public/logo.svg";
 import HeaderLogoResp from "@/public/logo-resp.png";
@@ -6,27 +8,50 @@ import HeaderHeartIcon from "@/public/icons/coracao.svg";
 import HeaderCartIcon from "@/public/icons/carrinho.svg";
 import HeaderMenuIcon from "@/public/icons/menu.svg";
 import styles from "./styles.module.css";
+import { useRouter } from "next/navigation";
 
 export default function HeaderComponents() {
+  const router = useRouter();
+
+  const handleButtonWishlist = () => {
+    router.push("/wishlist");
+  };
+
+  const handleButtonHome = () => {
+    router.push("/");
+  };
+
   return (
     <header className={styles.container}>
       <div className={styles.container_primary}>
         <div className={styles.logo_image}>
-          <Image
-            className={styles.Teste1}
-            src={HeaderLogo}
-            alt="AMARO"
-            width={150}
-            height={28}
-            title="AMARO | o melhor da moda, beleza, bem-estar e casa"
-          />
-          <Image
-            className={styles.Teste2}
-            src={HeaderLogoResp}
-            alt="AMARO"
-            width={28}
-            height={28}
-          />
+          <button
+            onClick={() => {
+              handleButtonHome();
+            }}
+          >
+            <Image
+              className={styles.Teste1}
+              src={HeaderLogo}
+              alt="AMARO"
+              width={150}
+              height={28}
+              title="AMARO | o melhor da moda, beleza, bem-estar e casa"
+            />
+          </button>
+          <button
+            onClick={() => {
+              handleButtonHome();
+            }}
+          >
+            <Image
+              className={styles.Teste2}
+              src={HeaderLogoResp}
+              alt="AMARO"
+              width={28}
+              height={28}
+            />
+          </button>
         </div>
         <div className={styles.input}>
           <input type="text" placeholder="O que você está procurando?" />
@@ -43,7 +68,11 @@ export default function HeaderComponents() {
       <div className={styles.container_secondary}>
         <div className={styles.menu_open}>
           <div>
-            <button>
+            <button
+              onClick={() => {
+                handleButtonWishlist();
+              }}
+            >
               <Image
                 src={HeaderHeartIcon}
                 alt="Desejos"
